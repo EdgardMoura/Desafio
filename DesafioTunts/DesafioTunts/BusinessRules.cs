@@ -8,51 +8,53 @@ namespace DesafioTunts
 {
     class BusinessRules
     {
-        public int CalculaMedia(string P1, string P2, string P3)
+        //Method used to perform the student's average calculation.
+        public int CalculatesAverage(string P1, string P2, string P3)
         {
-            int nota1 = int.Parse(P1);
-            int nota2 = int.Parse(P2);
-            int nota3 = int.Parse(P3);
+            int score1 = int.Parse(P1);
+            int score2 = int.Parse(P2);
+            int score3 = int.Parse(P3);
 
-            int media = ((nota1 + nota2 + nota3) / 3) + 1;
+            int avg = ((score1 + score2 + score3) / 3) + 1;
 
-            return media;
+            return avg;
         }
 
-        public string CalculaSituacao(string faltas, string P1, string P2, string P3)
+        //Method used to calculate the student's situation.
+        public string AbsencePercentage(string absence, string P1, string P2, string P3)
         {
-            double percentualFalta = double.Parse(faltas) / 60 * 100;
+            double percentageAbsence = double.Parse(absence) / 60 * 100;
 
 
-            string resultado = null;
-            int media = CalculaMedia(P1, P2, P3);
+            string result = null;
+            int avg = CalculatesAverage(P1, P2, P3);
 
-            if (percentualFalta > 25)
-                resultado = "Reprovado por Falta";
+            if (percentageAbsence > 25)
+                result = "Reprovado por Falta";
 
-            else if (media < 50)
-                resultado = "Reprovado por Nota";
+            else if (avg < 50)
+                result = "Reprovado por Nota";
 
-            else if (media >= 50 && media < 70)
-                resultado = "Exame Final";
+            else if (avg >= 50 && avg < 70)
+                result = "Exame Final";
 
             else
-                resultado = "Aprovado";
+                result = "Aprovado";
 
 
-            return resultado;
+            return result;
         }
-        public int Naf(int media, string situacao)
+
+        //Method used to carry out the calculation of the final grade necessary for approval, in case of final exam.
+        public int Naf(int avg, string situation)
         {
-            if (situacao == "Exame Final")
+            if (situation == "Exame Final")
             {
-                //5 <= (m + naf)/2
-                
-               
-                return 100 - media;
+                //5 <= (m + naf)/2                              
+                return 100 - avg;
             }
             else
-            return 0;
+                return 0;
         }
 
     }
