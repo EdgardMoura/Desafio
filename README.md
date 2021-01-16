@@ -5,9 +5,9 @@ Methods and tools used to develop the application:
 - Search the Google Sheet API Documentation on how to access and update a spreadsheet (developers.google.com).
 - Enable the Google Sheet API for the project.
 - Install the package to use the google sheet package (Google.Api.Sheets.v4).
-- Configuration of the credentials file in the project, in this case we use the debug folder to store the credentials.json file
-- Implementation of Interaction with the spreadsheet
-- Implementation of business and processing rules in a separate class
+- Configuration of the credentials file in the project, in this case we use the debug folder to store the credentials.json file.
+- Implementation of Interaction with the spreadsheet.
+- Implementation of business and processing rules in a separate class.
 - Spreadsheet link available: Spreadsheet: https://docs.google.com/spreadsheets/d/1XvWJcRLj2WAeXO3ULQ_GxGm9---3SZkjMbGcXMJtt70/edit?usp=sharing
 - Copy made, configured as the Spreadsheet publishes: https://docs.google.com/spreadsheets/d/14D5q1gu-NfV6ky23M7Nt0wZVymLedHkLikv3czovEoc/edit#gid=0
 
@@ -25,7 +25,7 @@ To run the application:
 - GitHub link https://github.com/EdgardMoura/Desafio
 - Use the Desafio Tunts.exe executable file available in the path: \ DesafioTunts \ DesafioTunts \ bin \ Debug \
 - Click on the spreadsheet to check the result https://docs.google.com/spreadsheets/d/14D5q1gu-NfV6ky23M7Nt0wZVymLedHkLikv3czovEoc/edit#gid=0
-(can also be seen during execution)
+(can also be seen during execution).
 
 
 Considerations:
